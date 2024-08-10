@@ -34,10 +34,10 @@ async def pulsating_light():
         for i in range(0, num_pixels+buffer):
             if i<num_pixels:
                 pixels[i] = pulse_color
-                pixels.show()
+            pixels.show()
             if i>=buffer:
                 pixels[i-buffer] = main_color
-                pixels.show()
+            pixels.show()
             await asyncio.sleep(0.01)
 
 async def switch_handler():
@@ -59,3 +59,4 @@ async def main():
 
 
 asyncio.run(main())
+
